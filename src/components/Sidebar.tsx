@@ -54,7 +54,7 @@ export default function Sidebar() {
       </button>
 
       <div className={`
-        fixed top-0 left-0 h-full bg-card border-r border-border
+        fixed top-0 left-0 h-full bg-card border-r border-border backdrop-blur-md
         transform transition-transform duration-200 ease-in-out z-40
         lg:translate-x-0 w-64 pt-16
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}

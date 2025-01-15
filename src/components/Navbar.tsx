@@ -8,10 +8,10 @@ export default function Navbar() {
   const version = "1.0.0";
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-card/80 backdrop-blur-sm border-b border-border">
+    <nav className="fixed w-full top-0 z-50 bg-card/80 bg-blur-10 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex lg:ml-64">
+          <div className="flex lg:ml-64 justify-center w-full lg:w-auto">
             <Link href="/" className="flex items-center">
               <Brain className="h-8 w-8 text-primary" />
               <span className="ml-2 text-xl font-bold">RouletteAI</span>
