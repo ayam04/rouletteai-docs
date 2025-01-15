@@ -85,22 +85,24 @@ export default function Hero() {
           </div>
           
           <div className="text-center mt-16">
-            <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+            <h2 className="text-2xl font-bold bg-clip-text bg-gradient-to-r from-primary to-primary/60 transition-colors">
               Launching Soon!
             </h2>
             <p className="mt-2 text-lg text-muted-foreground">
               Subscribe to our newsletter for updates:
             </p>
-            <form className="mt-6 flex justify-center max-w-md mx-auto" onSubmit={handleSubmit}>
+            <form className="mt-6 flex justify-center max-w-md mx-auto text-black" onSubmit={handleSubmit}>
               <div className="relative w-full">
                 <input 
                   type="email" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email" 
-                  className="w-full px-4 py-3 rounded-lg border border-border/50 bg-background/50 
+                  className={`w-full px-4 py-3 rounded-lg border border-border/50 bg-background/50 
                            focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary
-                           transition-all duration-200 pr-12"
+                           duration-200 pr-12 transition-colors ${
+                             email ? 'bg-gradient-to-r from-primary to-primary/50' : ''
+                           }`}
                   required 
                 />
                 <button 
@@ -108,11 +110,11 @@ export default function Hero() {
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-md
-                           bg-primary hover:bg-primary/90 transition-all duration-200
+                           bg-primary hover:bg-primary/90 duration-200 text-black
                            text-primary-foreground"
                 >
                   <Send 
-                    className={`h-5 w-5 transition-transform duration-200 ${
+                    className={`h-5 w-5 text-black ${
                       isHovered ? 'translate-x-0.5 -translate-y-0.5' : ''
                     }`}
                   />
